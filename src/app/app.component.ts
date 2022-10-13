@@ -72,7 +72,9 @@ ngOnInit():void{
   this.getAllMarketing();
   this.getAllSales();
 }
-
+    myFunction() {
+      alert("Confirm delete.");
+    }
 //GET
   getAllEmploys(){
     this.employeeService.getAllEmployees()
@@ -109,6 +111,7 @@ ngOnInit():void{
     else{
       this.updejtEmployee(this.employee);
     }
+    window.location.reload();
   }
   //GET
   getAllEmploysByDepId(id:number){
@@ -170,15 +173,22 @@ ngOnInit():void{
         this.getAllEmploys();
       }
     );
+    window.location.reload();
   }
 
   onDelete(id:number){
-    this.employeeService.deleteEmployee(id)
+    if (confirm('Are you sure you want to save this thing into the database?')) {
+      this.employeeService.deleteEmployee(id)
     .subscribe(
       response => {
         this.getAllEmploys();
       }
     );
+      console.log('user with'+ id +'was deleted');
+    } else {
+      console.log('user was not deleted.');
+    }
+    window.location.reload();
   }
 
   populateForm(employee:Employee){

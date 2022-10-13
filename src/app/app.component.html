@@ -68,9 +68,9 @@
     </select>
         </div>
         <!-- </div> -->
-        <div class="form-group">
+        <div class="form-group" style="padding-left: 12%; padding-top: 5%;">
           <button class="savebtn">Add Employee</button>
-          <button class="resetbtn" type="reset" value="Reset" width="5px"> Reset</button>
+          <button class="resetbtn" type="reset" value="Reset" width="5px">Reset Form</button>
         </div>
           
       </form>
@@ -99,7 +99,7 @@
     </div> -->
     
     <div class="reg-grid">
-      <h1>Economy</h1>
+      <h1 style=>Economy</h1>
       <div (click)="populateForm(employee)"
         class="reg-row"
         *ngFor="let employee of economyemployees"
@@ -116,12 +116,13 @@
         
     </table>
     <div class="reg-row-action">
-      <a (click)="onDelete(employee.id)"
-        ><i class="fa-solid fa-x"></i></a>
-    </div>
-    <div class="reg-row-action">
       <a (click)="populateForm(employee)"><i class="fa-solid fa-pen-nib"></i></a>
     </div>
+    <div class="reg-row-action">
+      <a (click)="onDelete(employee.id)" 
+        ><i class="fa-solid fa-x"></i></a>
+    </div>
+    
       </div>
     </div>
     <div class="reg-grid">
@@ -142,12 +143,13 @@
         
     </table>
     <div class="reg-row-action">
+      <a (click)="populateForm(employee)"><i class="fa-solid fa-pen-nib"></i></a>
+    </div>
+    <div class="reg-row-action">
       <a (click)="onDelete(employee.id)"
         ><i class="fa-solid fa-x"></i></a>
     </div>
-    <div class="reg-row-action">
-      <a (click)="populateForm(employee)"><i class="fa-solid fa-pen-nib"></i></a>
-    </div>
+    
       </div>
     </div>
 
@@ -168,12 +170,13 @@
         </tr>
         
     </table>
+        
+        <div class="reg-row-action">
+          <a (click)="populateForm(employee)"><i class="fa-solid fa-pen-nib"></i></a>
+        </div>
         <div class="reg-row-action">
           <a (click)="onDelete(employee.id)"
             ><i class="fa-solid fa-x"></i></a>
-        </div>
-        <div class="reg-row-action">
-          <a (click)="populateForm(employee)"><i class="fa-solid fa-pen-nib"></i></a>
         </div>
       </div>
     </div>
@@ -195,12 +198,13 @@
         </tr>
         
     </table>
+    
+    <div class="reg-row-action">
+      <a (click)="populateForm(employee)"><i class="fa-solid fa-pen-nib"></i></a>
+    </div>
     <div class="reg-row-action">
       <a (click)="onDelete(employee.id)"
         ><i class="fa-solid fa-x"></i></a>
-    </div>
-    <div class="reg-row-action">
-      <a (click)="populateForm(employee)"><i class="fa-solid fa-pen-nib"></i></a>
     </div>
     </div>
   </div>
